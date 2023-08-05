@@ -1,0 +1,55 @@
+.word-to-guess
+{
+  font-size: 3rem;
+}
+
+.keyboard
+{
+  display: flex;
+  justify-content: center;
+}
+
+.keyboard > button
+{
+  font-size: 1.2rem;
+  padding: 15px;
+}
+
+.hangman-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-to-guess
+{
+  display: flex;
+  justify-content: center;
+}
+
+.game-over
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.btn-reiniciar
+{
+  background-color: aquamarine;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reiniciar:hover
+{
+  background-color: aqua;
+  transition: all 0.2s;
+}

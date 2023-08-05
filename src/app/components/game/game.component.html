@@ -1,0 +1,23 @@
+<section class="hangman-container">
+  <section>
+    <img [src]="img[lives]" alt="hangman image">
+  </section>
+</section>
+
+<p class="word-to-guess"> {{ getWordToDisplay() }} </p>
+
+<div class="keyboard">
+  <ng-container *ngFor="let char of letters">
+    <button [disabled]="isLetterGuessed(char) || isGameOver()" (click)="handleClick(char)">
+      {{ char }}
+    </button>
+  </ng-container>
+</div>
+
+<div *ngIf="isGameOver()" class="game-over">
+  <h2 *ngIf="getWordToDisplay() === wordToGuess.split('').join(' ')"> Has ganado!! 🎉 </h2>
+  <h2 *ngIf="getWordToDisplay() !== wordToGuess.split('').join(' ')"> Has perdido 💀 </h2>
+
+  <p> La palabra correcta es: {{ wordToGuess }} </p>
+  <button (click)="resetGame()" class="btn-reiniciar"> Reiniciar partida </button>
+</div>
